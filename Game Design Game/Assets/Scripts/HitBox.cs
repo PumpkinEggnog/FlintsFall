@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class HitBox : MonoBehaviour
 {
-    public int damage = -1;
-    public bool attacking;
+    private BoxCollider collider;
+    public float offset = 1f;
+    public int value = -1;
+    //public bool attacking;
     // Start is called before the first frame update
     void Start()
     {
-        deactivate();
+        collider = GetComponent<BoxCollider>();        
     }
 
     // Update is called once per frame
@@ -18,13 +20,21 @@ public class HitBox : MonoBehaviour
         
     }
 
-    public void activate()
+    public void changeDirection(bool facingRight)
     {
-        attacking = true;
+        if(facingRight)
+        {
+            transform.localPosition = Vector3.left * offset;
+        }
+        else
+        {
+            transform.localPosition = Vector3.right * offset;
+        }
+        
     }
 
-    public void deactivate()
+    public void attacking(bool isAttacking)
     {
-        attacking = false;
+        collider.enabled = isAttacking;
     }
 }
