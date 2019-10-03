@@ -35,6 +35,7 @@ public class HitBox : MonoBehaviour
 
     public void attacking(bool isAttacking)
     {
+        collider = GetComponent<BoxCollider>();
         collider.enabled = isAttacking;
     }
 }
