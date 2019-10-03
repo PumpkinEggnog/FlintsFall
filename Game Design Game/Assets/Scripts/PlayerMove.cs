@@ -45,6 +45,7 @@ public class PlayerMove : MonoBehaviour
         {
             rigidBody.AddForce(Vector3.up * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
             onGround = false;
+            Debug.Log("Jumping");
         }
 
         if (Input.GetKeyDown("c") && 
@@ -84,10 +85,11 @@ public class PlayerMove : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.impulse);
-        if (collision.impulse.y > 0)
+        if (collision.impulse.y >= 0)
         {
             onGround = true;
         }
+        Debug.Log(collision.impulse);
         isDashing = false;
         // canDash = true;
     }
