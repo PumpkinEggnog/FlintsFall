@@ -84,16 +84,11 @@ public class PlayerMove : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.impulse);
-        if (collision.impulse.y > 0)
+        if (collision.impulse.y >= 0)
         {
             onGround = true;
         }
         isDashing = false;
         // canDash = true;
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-
     }
 }

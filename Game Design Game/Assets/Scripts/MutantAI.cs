@@ -17,7 +17,7 @@ public class MutantAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float distance = Vector3.Distance(target.position, transform.position);
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667564, g: 0.48427135, b: 0.56452316, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -222,6 +222,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: tower map tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: cc274a361d7025d4795fdf73ff821c55,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: cc274a361d7025d4795fdf73ff821c55,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cc274a361d7025d4795fdf73ff821c55,
         type: 3}
@@ -1007,7 +1017,7 @@ GameObject:
   - component: {fileID: 1463641534}
   - component: {fileID: 1463641533}
   - component: {fileID: 1463641540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mutant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1119,7 +1129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463641532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0.32, z: 3.04}
+  m_LocalPosition: {x: -1.5, y: 0.361, z: 2.95}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1453,7 +1463,7 @@ PrefabInstance:
     - target: {fileID: 6830278162556553143, guid: 033d5d992533c5340814fb894a58425a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.47
+      value: 1.321
       objectReference: {fileID: 0}
     - target: {fileID: 6830278162556553143, guid: 033d5d992533c5340814fb894a58425a,
         type: 3}
@@ -1503,17 +1513,17 @@ PrefabInstance:
     - target: {fileID: 6830278162556553143, guid: 033d5d992533c5340814fb894a58425a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.30048677
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6830278162556553143, guid: 033d5d992533c5340814fb894a58425a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.30048677
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6830278162556553143, guid: 033d5d992533c5340814fb894a58425a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.30048677
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6830278162556553141, guid: 033d5d992533c5340814fb894a58425a,
         type: 3}
