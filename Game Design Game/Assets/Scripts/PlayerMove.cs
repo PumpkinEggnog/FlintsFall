@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     private float lastDashTime = -1;
     private bool isDashing = false;
     private int dashDirection = 0;
-    public float dashCooldown = 1.0f;
+    public float dashCooldown = .3f;
     public float dashRange = 500;
     public float dashDuration = 0.003f;
     public float playerRotation = 0;
