@@ -7,12 +7,18 @@ public class PlayerMove : MonoBehaviour
     public float jumpVelocity = 5f;
 
     private Rigidbody rigidBody;
-    private bool onGround = true;
+   
+
+    private bool onGround = false;
+    private bool isJumping = false;
+
+    private bool wallSliding = false;
+    private float wallSlideSpeed = 3;
 
     private float lastDashTime = -1;
     private bool isDashing = false;
     private int dashDirection = 0;
-    public float dashCooldown = .3f;
+    public float dashCooldown = 1.0f;
     public float dashRange = 500;
     public float dashDuration = 0.003f;
     public float playerRotation = 0;
@@ -28,6 +34,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+
         // Keep the camera at origin, constantly track player from origin   
         var camera = GetComponentInChildren<Camera>();
         var idealPosition = Vector3.zero + Vector3.up * transform.position.y;
@@ -41,11 +49,47 @@ public class PlayerMove : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         //transform.rotation = Quaternion.FromToRotation(Vector3.up, Vector3.zero);
 
-        if (Input.GetKeyDown("z") && onGround)//jump
+        if (Input.GetKeyDown("z") && !isJumping && !wallSliding)//jump
         {
-            rigidBody.AddForce(Vector3.up * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
+            Debug.Log("Jumping start " + isJumping);
             onGround = false;
+            isJumping = true;
+            Debug.Log("Jumping end " + isJumping);
+
+            rigidBody.AddForce(Vector3.up * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
         }
+
+        if (Input.GetKeyDown("z") && wallSliding && !onGround)//jump
+        {
+            Debug.Log("wall jump activated");
+            
+            Vector3 wallJumpVector = Vector3.left + (Vector3.up) * jumpVelocity * Time.deltaTime; // left is always the vector facing away from the character facing.
+            Debug.Log(wallJumpVector);
+            rigidBody.velocity = new Vector3(0, 0, 0);
+
+            rigidBody.AddForce(wallJumpVector, ForceMode.Impulse);
+        }
+
+        /*
+        //MORE WALLJUMP/SLIDE STUFF
+        if (wallSliding == true)
+        {
+            //rigidBody.AddForce(1, 3, 1);
+            
+            
+            if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
+            {
+                rigidBody.AddForce(Vector3.left + (Vector3.up) * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
+                Debug.Log("That was a left wallJump");
+            }
+            if(Input.GetKeyDown("z") && Input.GetKeyDown("right"))
+            {
+                rigidBody.AddForce(Vector3.left + (Vector3.up) * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
+                Debug.Log("That was a right wallJump");
+            }
+        }
+        //
+        */
 
         if (Input.GetKeyDown("c") && 
             ((Time.time - lastDashTime) >= dashCooldown) && 
@@ -81,14 +125,57 @@ public class PlayerMove : MonoBehaviour
         playerRotation = rigidBody.transform.rotation.eulerAngles.y;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.impulse);
+        /*//Debug.Log(collision.impulse);
         if (collision.impulse.y >= 0)
         {
             onGround = true;
-        }
+        }*/
+
+        // if(collision.gameObject.tag == "floor")
+        // {
+        //     onGround = true;
+        // }
+
         isDashing = false;
         // canDash = true;
+        //Detect collisions between the GameObjects with Colliders attached
+        //WallJumping
+        if (collision.gameObject.tag == "Floor")
+        {
+            onGround = true;
+            isJumping = false;
+            Debug.Log("Jumping" + isJumping);
+            //wallSliding = false;
+            //Debug.Log("Wallsliding" + wallSliding);
+        }
+
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            wallSliding = true;
+            //Debug.Log("Wallsliding" + wallSliding);
+        }
     }
+
+    public void OnCollisionExit(Collision collision)
+    {
+        //onGround = false;
+        //Debug.Log("onGround" + onGround);
+        wallSliding = false;
+        //Debug.Log("Wallsliding" + wallSliding);
+
+    }
+
+    // public void OnCollisionStay(Collision collision)
+    // {
+    //     if (collision.gameObject.tag == "Floor")
+    //     {
+    //         onGround = true;
+    //         wallSliding = false;
+    //         //Debug.Log("onGround " + onGround);
+    //     }
+    // }   
+    
 }
