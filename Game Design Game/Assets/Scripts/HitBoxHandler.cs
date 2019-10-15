@@ -21,24 +21,8 @@ public class HitBoxHandler : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        // var otherObject = other.gameObject;
-        // if (otherObject.CompareTag("HealthPickup"))
-        // {
-        //     otherObject.SetActive(false);
-        //     this.health.changeHealth(hitbox.value);
-        //     Debug.Log("health "+health.getHealth());
-        // }
-        // else
-        // {
-        //     HitBox hitbox = otherObject.GetComponent<HitBox>();
-        //     //otherObject.SetActive(false);
-        //     this.health.changeHealth(hitbox.value);
-        //     Debug.Log("health "+health.getHealth());
-        // }
-
         HitBox hitbox = other.gameObject.GetComponent<HitBox>();
         this.health.changeHealth(hitbox.value);
-        Debug.Log("health "+health.getHealth());
-        
+        Debug.Log("health "+health.getHealth());    
     }
 }
