@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
 
     private bool onGround = false;
     private bool isJumping = false;
+    private bool isWallJumping = false;
 
     private bool wallSliding = false;
     private float wallSlideSpeed = 3;
@@ -31,6 +32,22 @@ public class PlayerMove : MonoBehaviour
         distanceFromOrigin = Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.z, 2));
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown("z"))
+        {
+            if (onGround && !wallSliding)
+            {
+                isJumping = true;
+            }
+            else if (wallSliding && !onGround)
+            {
+                isWallJumping = true;
+            }
+            
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -49,18 +66,19 @@ public class PlayerMove : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         //transform.rotation = Quaternion.FromToRotation(Vector3.up, Vector3.zero);
 
-        if (Input.GetKeyDown("z") && !isJumping && !wallSliding)//jump
+        if (isJumping)//jump
         {
             Debug.Log("Jumping start " + isJumping);
             onGround = false;
-            isJumping = true;
+            isJumping = false;
             Debug.Log("Jumping end " + isJumping);
 
             rigidBody.AddForce(Vector3.up * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
         }
 
-        if (Input.GetKeyDown("z") && wallSliding && !onGround)//jump
+        if (isWallJumping)//jump
         {
+            isWallJumping = false;
             Debug.Log("wall jump activated");
             
             Vector3 wallJumpVector = Vector3.left + (Vector3.up) * jumpVelocity * Time.deltaTime; // left is always the vector facing away from the character facing.
