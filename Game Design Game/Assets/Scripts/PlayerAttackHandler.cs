@@ -6,7 +6,8 @@ public class PlayerAttackHandler : MonoBehaviour
 {
     private bool facingRight;
     private bool isAttacking;
-    private float attackLength = 1f;
+    private float attackLength = 0.5f;
+    // private float dashLength = 0.003f;
     private float lastAttackTime;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,17 @@ public class PlayerAttackHandler : MonoBehaviour
         hitbox.changeDirection(facingRight);
         hitbox.attacking(false);
         isAttacking = false;
+    }
+
+    void Update()
+    {
+        // HitBox hitbox = GetComponentInChildren<HitBox>();
+        // if ((Input.GetKeyDown("f") || Input.GetKeyDown("c")) && !isAttacking)
+        // {
+        //     hitbox.attacking(true);
+        //     lastAttackTime = Time.time;
+        //     isAttacking = true;
+        // }
     }
 
     // Update is called once per frame
@@ -36,12 +48,21 @@ public class PlayerAttackHandler : MonoBehaviour
             hitbox.changeDirection(facingRight);
         }
 
-        if (Input.GetKeyDown("f") && !isAttacking)
+        // if (Input.GetKeyDown("f") && !isAttacking)
+        // {
+        //     hitbox.attacking(true);
+        //     lastAttackTime = Time.time;
+        //     isAttacking = true;
+        // }
+
+        
+        if ((Input.GetKeyDown("f") || Input.GetKeyDown("c")) && !isAttacking)
         {
             hitbox.attacking(true);
             lastAttackTime = Time.time;
             isAttacking = true;
         }
+
 
         if (isAttacking && ((Time.time - lastAttackTime) >= attackLength))
         {

@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class HitBoxHandler : MonoBehaviour
+public class EnemyHitboxHandler : MonoBehaviour
 {
-    private HealthSystem health = new HealthSystem(3);
-    public Text textbox;
+
+    private HealthSystem health = new HealthSystem(1);
     // Start is called before the first frame update
     void Start()
     {
@@ -16,16 +15,22 @@ public class HitBoxHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textbox.text = "Health: " + health.getHealth();
+        if(health.getHealth() <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+        
     }
-    
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("EnemyAttack") || other.gameObject.CompareTag("HealthPickup"))
+        if (other.gameObject.CompareTag("PlayerAttack"))
         {
+            Debug.Log("I've been hit!");
             HitBox hitbox = other.gameObject.GetComponent<HitBox>();
             this.health.changeHealth(hitbox.value);
             Debug.Log("health "+health.getHealth());
         }
+        
     }
 }

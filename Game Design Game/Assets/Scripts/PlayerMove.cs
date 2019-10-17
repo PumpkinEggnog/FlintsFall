@@ -46,6 +46,20 @@ public class PlayerMove : MonoBehaviour
             }
             
         }
+
+        if (Input.GetKeyDown("c") && 
+            ((Time.time - lastDashTime) >= dashCooldown) && 
+            !isDashing && 
+            Input.GetAxis("Horizontal") != 0) //dash
+        {
+            lastDashTime = Time.time;
+            isDashing = true;
+            dashDirection = (Input.GetAxis("Horizontal") > 0) ? 1 : -1;
+
+            //rigidBody.AddForce(Vector3.up * 1.5f * Time.deltaTime, ForceMode.Impulse);
+            //transform.RotateAround(Vector3.zero, Vector3.up, moveHorizontal * speed * dashRange * Time.deltaTime);
+            //canDash = false;
+        }
     }
 
     // Update is called once per frame
@@ -68,10 +82,10 @@ public class PlayerMove : MonoBehaviour
 
         if (isJumping)//jump
         {
-            Debug.Log("Jumping start " + isJumping);
+            // Debug.Log("Jumping start " + isJumping);
             onGround = false;
             isJumping = false;
-            Debug.Log("Jumping end " + isJumping);
+            // Debug.Log("Jumping end " + isJumping);
 
             rigidBody.AddForce(Vector3.up * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
         }
@@ -79,10 +93,10 @@ public class PlayerMove : MonoBehaviour
         if (isWallJumping)//jump
         {
             isWallJumping = false;
-            Debug.Log("wall jump activated");
+            // Debug.Log("wall jump activated");
             
             Vector3 wallJumpVector = Vector3.left + (Vector3.up) * jumpVelocity * Time.deltaTime; // left is always the vector facing away from the character facing.
-            Debug.Log(wallJumpVector);
+            // Debug.Log(wallJumpVector);
             rigidBody.velocity = new Vector3(0, 0, 0);
 
             rigidBody.AddForce(wallJumpVector, ForceMode.Impulse);
@@ -109,19 +123,19 @@ public class PlayerMove : MonoBehaviour
         //
         */
 
-        if (Input.GetKeyDown("c") && 
-            ((Time.time - lastDashTime) >= dashCooldown) && 
-            !isDashing && 
-            moveHorizontal != 0) //dash
-        {
-            lastDashTime = Time.time;
-            isDashing = true;
-            dashDirection = (moveHorizontal > 0) ? 1 : -1;
+        // if (Input.GetKeyDown("c") && 
+        //     ((Time.time - lastDashTime) >= dashCooldown) && 
+        //     !isDashing && 
+        //     moveHorizontal != 0) //dash
+        // {
+        //     lastDashTime = Time.time;
+        //     isDashing = true;
+        //     dashDirection = (moveHorizontal > 0) ? 1 : -1;
 
-            //rigidBody.AddForce(Vector3.up * 1.5f * Time.deltaTime, ForceMode.Impulse);
-            //transform.RotateAround(Vector3.zero, Vector3.up, moveHorizontal * speed * dashRange * Time.deltaTime);
-            //canDash = false;
-        }
+        //     //rigidBody.AddForce(Vector3.up * 1.5f * Time.deltaTime, ForceMode.Impulse);
+        //     //transform.RotateAround(Vector3.zero, Vector3.up, moveHorizontal * speed * dashRange * Time.deltaTime);
+        //     //canDash = false;
+        // }
 
         if ((Time.time - lastDashTime) < dashDuration && isDashing)
         {
@@ -164,9 +178,9 @@ public class PlayerMove : MonoBehaviour
         {
             onGround = true;
             isJumping = false;
-            Debug.Log("Jumping" + isJumping);
-            //wallSliding = false;
-            //Debug.Log("Wallsliding" + wallSliding);
+            // Debug.Log("Jumping" + isJumping);
+            // wallSliding = false;
+            // Debug.Log("Wallsliding" + wallSliding);
         }
 
 
@@ -177,23 +191,23 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    public void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            onGround = true;
+            // Debug.Log("onGround " + onGround);
+            // isJumping = false;
+        }
+    }
+
     public void OnCollisionExit(Collision collision)
     {
-        //onGround = false;
-        //Debug.Log("onGround" + onGround);
+        onGround = false;
+        // Debug.Log("onGround " + onGround);
         wallSliding = false;
-        //Debug.Log("Wallsliding" + wallSliding);
+        // Debug.Log("Wallsliding " + wallSliding);
 
     }
 
-    // public void OnCollisionStay(Collision collision)
-    // {
-    //     if (collision.gameObject.tag == "Floor")
-    //     {
-    //         onGround = true;
-    //         wallSliding = false;
-    //         //Debug.Log("onGround " + onGround);
-    //     }
-    // }   
-    
 }

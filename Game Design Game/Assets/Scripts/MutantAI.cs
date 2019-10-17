@@ -7,18 +7,26 @@ public class MutantAI : MonoBehaviour
 {
     public float sightRadius = 5f;
 
+    private bool isAttacking;
+    private float attackLength = 1f;
+    private float lastAttack = -1f;
+    private float attackDelay = 1f;
+
     Transform target;
     NavMeshAgent agent;
 
     //initialization
     void Start()
     {
+        HitBox hitbox = GetComponentInChildren<HitBox>();
+        isAttacking = false;
         target = AISightManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
     void FixedUpdate()
     {
+        HitBox hitbox = GetComponentInChildren<HitBox>();
         float distance = Vector3.Distance(target.position, transform.position);
 
         if (distance <= sightRadius) //if the player moves into line of sight
@@ -28,7 +36,22 @@ public class MutantAI : MonoBehaviour
             if(distance <= agent.stoppingDistance) //checks to see if the mutant is next to the player
             {
                 FaceTarget(); //causes AI to face player
-                //insert attack here
+                
+                if(!isAttacking)
+                {
+                    isAttacking = true;
+                    lastAttack = Time.time;
+                }
+                
+                if(isAttacking && (Time.time >= (lastAttack + attackDelay + attackLength)))
+                {
+                    isAttacking = false;
+                    hitbox.attacking(false);
+                }
+                else if (isAttacking && (Time.time >= (lastAttack + attackDelay)))
+                {
+                    hitbox.attacking(true);
+                }
             }
         }
     }
