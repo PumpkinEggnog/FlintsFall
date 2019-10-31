@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
 
     private Rigidbody rigidBody;
    
+    private HitBoxHandler hitBoxHandler;
 
     private bool onGround = false;
     private bool isJumping = false;
@@ -28,6 +29,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
+        hitBoxHandler = GetComponent<HitBoxHandler>();
         rigidBody = GetComponent<Rigidbody>();
         distanceFromOrigin = Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.z, 2));
     }
@@ -52,6 +54,7 @@ public class PlayerMove : MonoBehaviour
             !isDashing && 
             Input.GetAxis("Horizontal") != 0) //dash
         {
+            hitBoxHandler.setInvincible(true, .5f);
             lastDashTime = Time.time;
             isDashing = true;
             dashDirection = (Input.GetAxis("Horizontal") > 0) ? 1 : -1;
@@ -148,7 +151,7 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            // perform movement as normal
+            // resume normal movement
             isDashing = false;
             rigidBody.useGravity = true;
             transform.RotateAround(Vector3.zero, Vector3.up, moveHorizontal * speed * Time.deltaTime);

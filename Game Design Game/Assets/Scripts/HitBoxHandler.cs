@@ -9,8 +9,8 @@ public class HitBoxHandler : MonoBehaviour
     public Text textbox;
 
     private bool isInvincible;
-    private float iFrameLength = 1;
-    private float lastHit;
+    private float iFrameLength;
+    private float iFrameStart;
 
 
     public int numOfHearts;
@@ -24,16 +24,18 @@ public class HitBoxHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isInvincible = false;   
+        setInvincible(false);   
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
         //textbox.text = "Health: " + health.getHealth();
-        if(isInvincible && ((Time.time - lastHit) >= iFrameLength))
+        if(isInvincible && ((Time.time - iFrameStart) >= iFrameLength))
         {
-            isInvincible = false;
+            setInvincible(false);
         }
 
 
@@ -67,8 +69,7 @@ public class HitBoxHandler : MonoBehaviour
             HitBox hitbox = other.gameObject.GetComponent<HitBox>();
             this.health.changeHealth(hitbox.value);
             Debug.Log("health "+health.getHealth());
-            isInvincible = true;
-            lastHit = Time.time;
+            setInvincible(true);
         }
         else if(other.gameObject.CompareTag("HealthPickup"))
         {
@@ -77,5 +78,13 @@ public class HitBoxHandler : MonoBehaviour
             Debug.Log("health "+health.getHealth());
         }
         
+    }
+
+    public void setInvincible(bool input, float length = 1)
+    {
+        isInvincible = input;
+        iFrameLength = length;
+        iFrameStart = Time.time;
+        Debug.Log("invincibility is set to " + isInvincible);
     }
 }
