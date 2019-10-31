@@ -33,6 +33,7 @@ public class PlayerAttackHandler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Transform spriteTransform = transform.Find("Animation");
         HitBox hitbox = GetComponentInChildren<HitBox>();
         
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -41,11 +42,13 @@ public class PlayerAttackHandler : MonoBehaviour
         {
             facingRight = true;
             hitbox.changeDirection(facingRight);
+            spriteTransform.localRotation = new Quaternion(0, 180, 0, 0);
         }
         else if (horizontalInput < 0)
         {
             facingRight = false;
             hitbox.changeDirection(facingRight);
+            spriteTransform.localRotation = new Quaternion(0, 0, 0, 0);
         }
 
         // if (Input.GetKeyDown("f") && !isAttacking)

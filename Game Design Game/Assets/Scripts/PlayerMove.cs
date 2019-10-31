@@ -60,6 +60,7 @@ public class PlayerMove : MonoBehaviour
             //transform.RotateAround(Vector3.zero, Vector3.up, moveHorizontal * speed * dashRange * Time.deltaTime);
             //canDash = false;
         }
+
     }
 
     // Update is called once per frame
