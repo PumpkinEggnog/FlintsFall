@@ -6,12 +6,14 @@ public class AISightManager : MonoBehaviour
 {
     #region Singleton
     public static AISightManager instance;
-
+    public GameObject player;
+    
     void Awake()
     {
         instance = this;
+        player = GameObject.Find("Player");
     }
     #endregion
 
-    public GameObject player;
+    
 }
