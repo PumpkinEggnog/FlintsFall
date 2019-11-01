@@ -1,0 +1,9 @@
+# Blender v2.79 (sub 0) OBJ File: 'Tower Map Level 1.blend'
+# www.blender.org
+o Platform.039_Cube.042
+v -2.744036 0.009110 0.807873
+v -2.654990 0.009110 1.069024
+v -2.307985 0.009110 0.682353
+v -2.233090 0.009110 0.902004
+s off
+f 1 3 4 2
