@@ -7,12 +7,14 @@ public class PlayerMove : MonoBehaviour
     public float jumpVelocity = 5f;
 
     private Rigidbody rigidBody;
-   
+    private Animator animator;
     private HitBoxHandler hitBoxHandler;
 
     private bool onGround = false;
     private bool isJumping = false;
     private bool isWallJumping = false;
+    private bool facingRight = true;
+    private bool wasJustFalling = false;
 
     private bool wallSliding = false;
     private float wallSlideSpeed = 3;
@@ -31,6 +33,7 @@ public class PlayerMove : MonoBehaviour
     {
         hitBoxHandler = GetComponent<HitBoxHandler>();
         rigidBody = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
         distanceFromOrigin = Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.z, 2));
     }
 
@@ -47,7 +50,6 @@ public class PlayerMove : MonoBehaviour
             {
                 isWallJumping = true;
             }
-            
         }
 
         if (Input.GetKeyDown("c") && 
@@ -69,8 +71,31 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-
+        animator.ResetTrigger("toJump");
+        animator.ResetTrigger("toLand");
+        animator.ResetTrigger("toWallslide");
+        animator.ResetTrigger("toDefault");
+        if (!onGround)
+        {
+            if (!wasJustFalling)
+            {
+                animator.SetTrigger("toJump");
+            }
+            wasJustFalling = true;
+        }
+        else if (onGround && wasJustFalling)
+        {
+            animator.SetTrigger("toLand");
+            wasJustFalling = false;
+        }
+        if (wallSliding && !onGround)
+        {
+            animator.SetTrigger("toWallslide");
+        }
+        else
+        {
+            animator.SetTrigger("toDefault");
+        }
         // Keep the camera at origin, constantly track player from origin   
         var camera = GetComponentInChildren<Camera>();
         var idealPosition = Vector3.zero + Vector3.up * transform.position.y;
@@ -83,6 +108,15 @@ public class PlayerMove : MonoBehaviour
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         //transform.rotation = Quaternion.FromToRotation(Vector3.up, Vector3.zero);
+
+        if (moveHorizontal > 0)
+        {
+            facingRight = true;
+        }
+        else if (moveHorizontal < 0)
+        {
+            facingRight = false;
+        }
 
         if (isJumping)//jump
         {
@@ -98,7 +132,6 @@ public class PlayerMove : MonoBehaviour
         {
             isWallJumping = false;
             // Debug.Log("wall jump activated");
-            
             Vector3 wallJumpVector = Vector3.left + (Vector3.up) * jumpVelocity * Time.deltaTime; // left is always the vector facing away from the character facing.
             // Debug.Log(wallJumpVector);
             rigidBody.velocity = new Vector3(0, 0, 0);
@@ -113,7 +146,7 @@ public class PlayerMove : MonoBehaviour
             //rigidBody.AddForce(1, 3, 1);
             
             
-            if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
+u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
             {
                 rigidBody.AddForce(Vector3.left + (Vector3.up) * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
                 Debug.Log("That was a left wallJump");
@@ -156,6 +189,13 @@ public class PlayerMove : MonoBehaviour
             isDashing = false;
             rigidBody.useGravity = true;
             transform.RotateAround(Vector3.zero, Vector3.up, moveHorizontal * speed * Time.deltaTime);
+            if (onGround)
+            {
+                animator.SetFloat("runBlend", Mathf.Abs(moveHorizontal));
+            }
+
+            float flip = facingRight ? -1.0f : 1.0f;
+            animator.transform.localRotation = Quaternion.Euler(0, flip * 90.0f, 0);
         }
 
         playerRotation = rigidBody.transform.rotation.eulerAngles.y;
