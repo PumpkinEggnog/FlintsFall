@@ -790,6 +790,7 @@ MeshCollider:
 --- !u!1 &349968866
 GameObject:
   m_ObjectHideFlags: 0
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -864,6 +865,8 @@ CanvasRenderer:
 --- !u!1001 &401471134
 PrefabInstance:
   m_ObjectHideFlags: 0
+=======
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 954217750}
@@ -1711,7 +1714,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200ea89f9a256b54f9b0e4d43295020b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   textbox: {fileID: 0}
+=======
+  textbox: {fileID: 475030201}
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   numOfHearts: 0
   hearts: []
   fullHeart: {fileID: 0}
