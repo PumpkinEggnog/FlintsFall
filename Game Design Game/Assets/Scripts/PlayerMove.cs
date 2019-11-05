@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody rigidBody;
     private Animator animator;
     private HitBoxHandler hitBoxHandler;
+    private SmearEffect smear;
 
     private bool onGround = false;
     private bool isJumping = false;
@@ -35,6 +36,7 @@ public class PlayerMove : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         distanceFromOrigin = Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.z, 2));
+        smear = GetComponentInChildren<SmearEffect>();
     }
 
     void Update()
@@ -182,6 +184,7 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
             // set accel to zero
             rigidBody.velocity = Vector3.zero;
             rigidBody.angularVelocity = Vector3.zero;
+            smear.amplification = 1.0f;
         }
         else
         {
@@ -196,6 +199,7 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
 
             float flip = facingRight ? -1.0f : 1.0f;
             animator.transform.localRotation = Quaternion.Euler(0, flip * 90.0f, 0);
+            smear.amplification = 0.0f;
         }
 
         playerRotation = rigidBody.transform.rotation.eulerAngles.y;
