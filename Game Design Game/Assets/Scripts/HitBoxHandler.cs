@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HitBoxHandler : MonoBehaviour
 {
@@ -57,6 +58,11 @@ public class HitBoxHandler : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
+        }
+
+        if(health.getHealth()==0)
+        {
+            SceneManager.LoadScene("DiedScene");
         }
 
 
