@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown("z"))
         {
             
-            if (onGround && !wallSlideRight && !wallSlideLeft)
+            if (onGround)
             {
                 isJumping = true;
             }
