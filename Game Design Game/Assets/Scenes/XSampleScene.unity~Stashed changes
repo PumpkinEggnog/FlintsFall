@@ -300,7 +300,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e9b764327ef1b064da3449c0ad6f5cee,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 5
+=======
+      value: 2
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e9b764327ef1b064da3449c0ad6f5cee,
         type: 3}
@@ -551,7 +555,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
 --- !u!1 &223504009
+=======
+--- !u!1 &266779101
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -559,27 +567,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   - component: {fileID: 223504010}
   - component: {fileID: 223504012}
   - component: {fileID: 223504011}
   m_Layer: 5
   m_Name: Heart (1)
+=======
+  - component: {fileID: 266779102}
+  - component: {fileID: 266779104}
+  - component: {fileID: 266779103}
+  m_Layer: 5
+  m_Name: Heart (5)
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
 --- !u!224 &223504010
+=======
+--- !u!224 &266779102
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   m_GameObject: {fileID: 223504009}
+=======
+  m_GameObject: {fileID: 266779101}
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   m_Father: {fileID: 1370091158}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -589,12 +614,27 @@ RectTransform:
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223504011
+=======
+  m_Father: {fileID: 1370336001}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -20, y: 125}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &266779103
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   m_GameObject: {fileID: 223504009}
+=======
+  m_GameObject: {fileID: 266779101}
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -617,13 +657,21 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
 --- !u!222 &223504012
+=======
+--- !u!222 &266779104
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   m_GameObject: {fileID: 223504009}
+=======
+  m_GameObject: {fileID: 266779101}
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_CullTransparentMesh: 0
 --- !u!1001 &325331766
 PrefabInstance:
@@ -685,7 +733,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e63a34ae13e75104bbf11c3641bfdb6a,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 9
+=======
+      value: 6
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e63a34ae13e75104bbf11c3641bfdb6a,
         type: 3}
@@ -869,7 +921,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: dd7ecbf1c0e2b8c4088b3be51bbd7e3f,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 4
+=======
+      value: 1
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: dd7ecbf1c0e2b8c4088b3be51bbd7e3f,
         type: 3}
@@ -1097,6 +1153,154 @@ Transform:
   m_Father: {fileID: 1174285895}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 10.612, y: 0, z: 0}
+--- !u!1 &547359710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547359711}
+  - component: {fileID: 547359713}
+  - component: {fileID: 547359712}
+  m_Layer: 5
+  m_Name: Heart (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &547359711
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547359710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1370336001}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -90, y: 125}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &547359712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547359710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 60f251a0beb55fc4dad3a0d46cc21beb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &547359713
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547359710}
+  m_CullTransparentMesh: 0
+--- !u!1 &785261958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785261959}
+  - component: {fileID: 785261961}
+  - component: {fileID: 785261960}
+  m_Layer: 5
+  m_Name: Heart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &785261959
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785261958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1370336001}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -370, y: 125}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &785261960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785261958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 60f251a0beb55fc4dad3a0d46cc21beb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &785261961
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785261958}
+  m_CullTransparentMesh: 0
 --- !u!1001 &893844129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1214,6 +1418,7 @@ Transform:
   - {fileID: 1499661226}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092117700
 GameObject:
@@ -1320,6 +1525,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1370091158}
   m_RootOrder: 4
+=======
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1695,7 +1902,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 62af83022d63a9b4dba15a8eafab9232,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 6
+=======
+      value: 3
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 62af83022d63a9b4dba15a8eafab9232,
         type: 3}
@@ -1967,7 +2178,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6c14cd73cd0279f42867a281c0f0c2b2,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 7
+=======
+      value: 4
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c14cd73cd0279f42867a281c0f0c2b2,
         type: 3}
@@ -2017,6 +2232,138 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2432090755550338912, guid: 6c14cd73cd0279f42867a281c0f0c2b2, type: 3}
+--- !u!1 &1370335997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370336001}
+  - component: {fileID: 1370336000}
+  - component: {fileID: 1370335999}
+  - component: {fileID: 1370335998}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1370335998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370335997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1370335999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370335997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1370336000
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370335997}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1370336001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370335997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1567358454}
+  - {fileID: 785261959}
+  - {fileID: 2115914688}
+  - {fileID: 1468918047}
+  - {fileID: 1587269816}
+  - {fileID: 547359711}
+  - {fileID: 266779102}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!4 &1463641539 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4761487223890125738, guid: b1b422fde82357246bd17f076d1ec5ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 4761487224614504041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1468918046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
+--- !u!64 &1325227566
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325227565}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -2432090755550338912, guid: 6c14cd73cd0279f42867a281c0f0c2b2, type: 3}
 --- !u!1 &1370091154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,11 +2378,21 @@ GameObject:
   - component: {fileID: 1370091155}
   m_Layer: 5
   m_Name: Canvas
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468918047}
+  - component: {fileID: 1468918049}
+  - component: {fileID: 1468918048}
+  m_Layer: 5
+  m_Name: Heart (2)
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
 --- !u!114 &1370091155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,11 +2518,38 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1414885937
 MonoBehaviour:
+=======
+--- !u!224 &1468918047
+RectTransform:
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   m_GameObject: {fileID: 1414885935}
+=======
+  m_GameObject: {fileID: 1468918046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1370336001}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -230, y: 125}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1468918048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468918046}
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2188,11 +2572,16 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
 --- !u!222 &1414885938
+=======
+--- !u!222 &1468918049
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414885935}
   m_CullTransparentMesh: 0
@@ -2201,7 +2590,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4761487223890125738, guid: b1b422fde82357246bd17f076d1ec5ea,
     type: 3}
   m_PrefabInstance: {fileID: 4761487224614504041}
+=======
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468918046}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1499661225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2262,7 +2655,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: cf748d4bf7b18b2469377e3c0fcbdd7d,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 12
+=======
+      value: 9
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cf748d4bf7b18b2469377e3c0fcbdd7d,
         type: 3}
@@ -2312,6 +2709,159 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2432090755550338912, guid: cf748d4bf7b18b2469377e3c0fcbdd7d, type: 3}
+--- !u!1 &1567358453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567358454}
+  - component: {fileID: 1567358456}
+  - component: {fileID: 1567358455}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1567358454
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567358453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1370336001}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30, y: -30}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1567358455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567358453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1567358456
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567358453}
+  m_CullTransparentMesh: 1
+--- !u!1 &1587269815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587269816}
+  - component: {fileID: 1587269818}
+  - component: {fileID: 1587269817}
+  m_Layer: 5
+  m_Name: Heart (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1587269816
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587269815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1370336001}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -160, y: 125}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1587269817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587269815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 60f251a0beb55fc4dad3a0d46cc21beb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1587269818
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587269815}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1638809377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2362,7 +2912,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 955410a4b8b080c439b6728c113487bc,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 11
+=======
+      value: 8
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 955410a4b8b080c439b6728c113487bc,
         type: 3}
@@ -2452,7 +3006,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 3932974b3b940384791c41334c8a0fc3,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 8
+=======
+      value: 5
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3932974b3b940384791c41334c8a0fc3,
         type: 3}
@@ -2916,7 +3474,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 28490214549b473468e9320cdf74224b,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 3
+=======
+      value: 0
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 28490214549b473468e9320cdf74224b,
         type: 3}
@@ -3111,6 +3673,80 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 1
   value: -1
+--- !u!1 &2115914687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2115914688}
+  - component: {fileID: 2115914690}
+  - component: {fileID: 2115914689}
+  m_Layer: 5
+  m_Name: Heart (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2115914688
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115914687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1370336001}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -300, y: 125}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2115914689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115914687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 60f251a0beb55fc4dad3a0d46cc21beb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &2115914690
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115914687}
+  m_CullTransparentMesh: 0
 --- !u!1001 &2128177499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3171,7 +3807,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e020bc99a54510f4d85f59d18097b956,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream:Game Design Game/Assets/Scenes/XSampleScene.unity~Stashed changes
       value: 10
+=======
+      value: 7
+>>>>>>> Stashed changes:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e020bc99a54510f4d85f59d18097b956,
         type: 3}

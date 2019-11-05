@@ -120,6 +120,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: b65da892ad6352b41a5a55bf8642a035, type: 2}
+<<<<<<< Updated upstream
 --- !u!1 &33236993
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +195,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33236993}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &52089924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -625,11 +628,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
 --- !u!1 &276840542
 =======
 --- !u!1 &223504009
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+--- !u!1 &223504009
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -637,6 +644,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
   - component: {fileID: 276840543}
   - component: {fileID: 276840545}
@@ -644,36 +652,50 @@ GameObject:
   m_Layer: 5
   m_Name: Heart6
 =======
+=======
+>>>>>>> Stashed changes
   - component: {fileID: 223504010}
   - component: {fileID: 223504012}
   - component: {fileID: 223504011}
   m_Layer: 5
   m_Name: Heart (1)
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
 --- !u!224 &276840543
 =======
 --- !u!224 &223504010
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+--- !u!224 &223504010
+>>>>>>> Stashed changes
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 276840542}
 =======
   m_GameObject: {fileID: 223504009}
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+  m_GameObject: {fileID: 223504009}
+>>>>>>> Stashed changes
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
   m_Father: {fileID: 880092406}
   m_RootOrder: 6
@@ -753,6 +775,9 @@ RectTransform:
 =======
   m_Father: {fileID: 1370091158}
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+  m_Father: {fileID: 1370091158}
+>>>>>>> Stashed changes
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -760,21 +785,29 @@ RectTransform:
   m_AnchoredPosition: {x: -300, y: 125}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
 --- !u!114 &303994995
 =======
 --- !u!114 &223504011
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+--- !u!114 &223504011
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 303994993}
 =======
   m_GameObject: {fileID: 223504009}
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+  m_GameObject: {fileID: 223504009}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -797,21 +830,29 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
 --- !u!222 &303994996
 =======
 --- !u!222 &223504012
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+--- !u!222 &223504012
+>>>>>>> Stashed changes
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 303994993}
 =======
   m_GameObject: {fileID: 223504009}
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+  m_GameObject: {fileID: 223504009}
+>>>>>>> Stashed changes
   m_CullTransparentMesh: 0
 --- !u!1001 &325331766
 PrefabInstance:
@@ -1143,6 +1184,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.457
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: 4761487223890125738, guid: b1b422fde82357246bd17f076d1ec5ea,
@@ -1183,6 +1225,8 @@ PrefabInstance:
     - target: {fileID: 4761487223890125738, guid: b1b422fde82357246bd17f076d1ec5ea,
         type: 3}
 =======
+=======
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4761487223890125738, guid: b1b422fde82357246bd17f076d1ec5ea,
         type: 3}
@@ -1221,7 +1265,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761487223890125738, guid: b1b422fde82357246bd17f076d1ec5ea,
         type: 3}
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+>>>>>>> Stashed changes
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -1326,6 +1373,7 @@ Transform:
   m_Father: {fileID: 1174285895}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 10.612, y: 0, z: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
 --- !u!1 &805129567
 GameObject:
@@ -1513,6 +1561,8 @@ RectTransform:
   m_Pivot: {x: 0, y: 0}
 =======
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &893844129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1630,9 +1680,12 @@ Transform:
   - {fileID: 1499661226}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
+=======
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092117700
 GameObject:
@@ -1782,7 +1835,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110519436}
   m_CullTransparentMesh: 0
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1174285886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,6 +2868,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1638809377}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1661264999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,6 +2943,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661264999}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1704126853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3161,8 +3220,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Game Design Game/Assets/Scenes/SampleScene.unity
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1870150487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,7 +3304,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870150487}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:Game Design Game/Assets/Scenes/XSampleScene.unity
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1900800162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3463,6 +3528,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -2432090755550338912, guid: 28490214549b473468e9320cdf74224b, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1959682907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3537,6 +3603,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959682907}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1992275366
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,6 +3750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 1
   value: -1
+<<<<<<< Updated upstream
 --- !u!1 &2109737950
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,6 +3825,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109737950}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &2128177499
 PrefabInstance:
   m_ObjectHideFlags: 0
