@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - Wall
   - Floor
+  - WallRight
+  - WallLeft
   layers:
   - Default
   - TransparentFX
