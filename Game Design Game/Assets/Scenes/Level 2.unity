@@ -135,6 +135,11 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: b78ba263ac21c7247ac0e52093cff232,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: b78ba263ac21c7247ac0e52093cff232,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b78ba263ac21c7247ac0e52093cff232,
@@ -192,6 +197,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2416733968201007103, guid: b78ba263ac21c7247ac0e52093cff232,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12a44902b6f02a745a78089321f8600f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b78ba263ac21c7247ac0e52093cff232, type: 3}
 --- !u!4 &41670670 stripped
@@ -322,6 +332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube.026
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 91526a176f261a642bb45dcf837f032b,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallLeft
       objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 91526a176f261a642bb45dcf837f032b,
         type: 3}
@@ -1194,6 +1209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube.010
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3c26325dca7058449ae69914135b0d8e,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallRight
+      objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 3c26325dca7058449ae69914135b0d8e,
         type: 3}
       propertyPath: m_TagString
@@ -1609,6 +1629,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube.012
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e4f8d367b69dea644a1861b7fd35c633,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallRight
+      objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: e4f8d367b69dea644a1861b7fd35c633,
         type: 3}
       propertyPath: m_TagString
@@ -1694,6 +1719,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube.009
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 647d48b44a9c057438106ed0d18f15c7,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 647d48b44a9c057438106ed0d18f15c7,
         type: 3}
       propertyPath: m_TagString
@@ -1778,6 +1808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube.030
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b1fa2579d030ff3458a77fa1b27b7562,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallRight
       objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: b1fa2579d030ff3458a77fa1b27b7562,
         type: 3}
@@ -1883,6 +1918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube.011
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c50c666ddf5db08499543ced88b5385a,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallRight
       objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: c50c666ddf5db08499543ced88b5385a,
         type: 3}
@@ -2246,6 +2286,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube.022
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 146fa0656637a014ab56760e5a962d21,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 146fa0656637a014ab56760e5a962d21,
         type: 3}
@@ -2699,6 +2744,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube.025
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 397a64dd1b6680c45a321ba2024b1e71,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 397a64dd1b6680c45a321ba2024b1e71,
         type: 3}
       propertyPath: m_TagString
@@ -3044,6 +3094,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube.037
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6eb6b21169261ad46a5f911b6e37dfe9,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallRight
       objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 6eb6b21169261ad46a5f911b6e37dfe9,
         type: 3}
@@ -3448,7 +3503,7 @@ PrefabInstance:
     - target: {fileID: 2534866581884222612, guid: cc46be18891d52d4d898610e3ec9a186,
         type: 3}
       propertyPath: m_TagString
-      value: Wall
+      value: WallLeft
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cc46be18891d52d4d898610e3ec9a186,
         type: 3}
@@ -3529,6 +3584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube.020
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 03937a52aa3d61b41b4171dfdb89e01c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 03937a52aa3d61b41b4171dfdb89e01c,
         type: 3}
@@ -3699,6 +3759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube.008
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 50f27ebb7284b5248bcd091e61a523b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallLeft
       objectReference: {fileID: 0}
     - target: {fileID: 2534866581884222612, guid: 50f27ebb7284b5248bcd091e61a523b9,
         type: 3}
