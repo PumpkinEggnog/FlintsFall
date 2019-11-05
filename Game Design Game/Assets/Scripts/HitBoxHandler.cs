@@ -80,6 +80,17 @@ public class HitBoxHandler : MonoBehaviour
         
     }
 
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Acid") && !isInvincible)
+        {
+            HitBox hitbox = other.gameObject.GetComponent<HitBox>();
+            this.health.changeHealth(hitbox.value);
+            Debug.Log("health "+health.getHealth());
+            setInvincible(true);
+        }
+    }
+
     public void setInvincible(bool input, float length = 1)
     {
         isInvincible = input;
