@@ -18,6 +18,7 @@ public class PlayerMove : MonoBehaviour
     private bool wasJustFalling = false;
 
     private bool wallSliding = false;
+    private Vector3 wallNormal;
     private float wallSlideSpeed = 3;
 
     private float lastDashTime = -1;
@@ -44,12 +45,11 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown("z"))
         {
             // Debug.Log("onGround " + onGround);
-            if (onGround)
+            if (onGround && (!isJumping || !isWallJumping))
             {
                 isJumping = true;
             }
-
-            else if (wallSliding && !onGround)
+            else if (wallSliding)
             {
                 isWallJumping = true;
             }
@@ -135,7 +135,7 @@ public class PlayerMove : MonoBehaviour
         {
             isWallJumping = false;
             // Debug.Log("wall jump activated");
-            Vector3 wallJumpVector = 3f*transform.forward + (1f*Vector3.up) * jumpVelocity * Time.deltaTime; // left is always the vector facing away from the character facing.
+            Vector3 wallJumpVector = .5f*wallNormal + (1f*Vector3.up) * jumpVelocity * Time.deltaTime; // left is always the vector facing away from the character facing.
             // Debug.Log(wallJumpVector);
             rigidBody.velocity = new Vector3(0, 0, 0);
 
@@ -226,6 +226,7 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
         //WallJumping
         if (collision.gameObject.tag == "Floor")
         {
+            wallNormal = collision.contacts[0].normal;
             onGround = true;
             isJumping = false;
             // Debug.Log("Jumping" + isJumping);
@@ -236,8 +237,11 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
 
         if (collision.gameObject.tag == "Wall")
         {
+            Debug.Log("Points colliding: " + collision.contacts.Length);
+            Debug.Log("First normal of the point that collide: " + collision.contacts[0].normal);
+            wallNormal = collision.contacts[0].normal;
             wallSliding = true;
-            //Debug.Log("Wallsliding" + wallSliding);
+            Debug.Log("Wallsliding" + wallSliding);
         }
 
     }
@@ -249,6 +253,14 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
             onGround = true;
             // Debug.Log("onGround " + onGround);
             // isJumping = false;
+        }
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("Points colliding: " + collision.contacts.Length);
+            Debug.Log("First normal of the point that collide: " + collision.contacts[0].normal);
+            wallNormal = collision.contacts[0].normal;
+            wallSliding = true;
+            Debug.Log("Wallsliding" + wallSliding);
         }
     }
     

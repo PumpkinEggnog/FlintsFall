@@ -5,7 +5,7 @@ using UnityEngine;
 public class AcidRise : MonoBehaviour
 {
     private bool start;
-    private float speed = .05f;
+    private float speed = .1f;
     // Start is called before the first frame update
     void Start()
     {
