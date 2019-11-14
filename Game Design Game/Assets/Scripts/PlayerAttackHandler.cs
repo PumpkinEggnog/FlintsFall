@@ -6,6 +6,7 @@ public class PlayerAttackHandler : MonoBehaviour
 {
     private bool facingRight;
     private bool isAttacking;
+    private Animator animator;
     private float attackLength = 0.5f;
     // private float dashLength = 0.003f;
     private float lastAttackTime;
@@ -13,6 +14,7 @@ public class PlayerAttackHandler : MonoBehaviour
     void Start()
     {
         HitBox hitbox = GetComponentInChildren<HitBox>();
+        animator = GetComponentInChildren<Animator>();
         facingRight = true;
         hitbox.changeDirection(facingRight);
         hitbox.attacking(false);
@@ -28,7 +30,10 @@ public class PlayerAttackHandler : MonoBehaviour
         //     lastAttackTime = Time.time;
         //     isAttacking = true;
         // }
+
+        animator.SetBool("attacking", isAttacking);
     }
+
 
     // Update is called once per frame
     void FixedUpdate()

@@ -68,6 +68,8 @@ public class PlayerMove : MonoBehaviour
         }
 
         animator.SetBool("ground", onGround);
+        // animator.SetBool("jumping", isJumping);
+        // animator.SetBool("walljumping", isWallJumping);
         animator.SetBool("wallsliding", wallSliding);
         animator.SetBool("falling", isFalling);
 
@@ -132,7 +134,7 @@ public class PlayerMove : MonoBehaviour
             // Debug.Log("Jumping start " + isJumping);
             onGround = false;
             isJumping = false;
-            isFalling = true;
+            // isFalling = true;
             // Debug.Log("Jumping end " + isJumping);
 
             rigidBody.AddForce(Vector3.up * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
