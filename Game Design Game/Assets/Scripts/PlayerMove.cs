@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
 
     private bool onGround = false;
     private bool isJumping = false;
+    private bool isFalling = true;
     private bool isWallJumping = false;
     private bool facingRight = true;
     private bool wasJustFalling = false;
@@ -64,16 +65,18 @@ public class PlayerMove : MonoBehaviour
             lastDashTime = Time.time;
             isDashing = true;
             dashDirection = (Input.GetAxis("Horizontal") > 0) ? 1 : -1;
-
-            //rigidBody.AddForce(Vector3.up * 1.5f * Time.deltaTime, ForceMode.Impulse);
-            //transform.RotateAround(Vector3.zero, Vector3.up, moveHorizontal * speed * dashRange * Time.deltaTime);
-            //canDash = false;
         }
+
+        animator.SetBool("ground", onGround);
+        animator.SetBool("wallsliding", wallSliding);
+        animator.SetBool("falling", isFalling);
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        /*
         animator.ResetTrigger("toJump");
         animator.ResetTrigger("toLand");
         animator.ResetTrigger("toWallslide");
@@ -99,6 +102,9 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetTrigger("toDefault");
         }
+        /* */
+
+
         // Keep the camera at origin, constantly track player from origin   
         var camera = GetComponentInChildren<Camera>();
         var idealPosition = Vector3.zero + Vector3.up * transform.position.y;
@@ -126,6 +132,7 @@ public class PlayerMove : MonoBehaviour
             // Debug.Log("Jumping start " + isJumping);
             onGround = false;
             isJumping = false;
+            isFalling = true;
             // Debug.Log("Jumping end " + isJumping);
 
             rigidBody.AddForce(Vector3.up * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
@@ -134,6 +141,7 @@ public class PlayerMove : MonoBehaviour
         if (isWallJumping)//jump
         {
             isWallJumping = false;
+            isFalling = true;
             // Debug.Log("wall jump activated");
             Vector3 wallJumpVector = 3f*transform.forward + (1f*Vector3.up) * jumpVelocity * Time.deltaTime; // left is always the vector facing away from the character facing.
             // Debug.Log(wallJumpVector);
@@ -228,7 +236,8 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
         {
             onGround = true;
             isJumping = false;
-            // Debug.Log("Jumping" + isJumping);
+            isFalling = false;
+            // Debug.Log("I am landing");
             // wallSliding = false;
             // Debug.Log("Wallsliding" + wallSliding);
         }
@@ -237,6 +246,7 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
         if (collision.gameObject.tag == "Wall")
         {
             wallSliding = true;
+            isFalling = false;
             //Debug.Log("Wallsliding" + wallSliding);
         }
 
@@ -247,6 +257,7 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
         if (collision.gameObject.tag == "Floor")
         {
             onGround = true;
+            // isFalling = false;
             // Debug.Log("onGround " + onGround);
             // isJumping = false;
         }
@@ -254,10 +265,15 @@ u           if (Input.GetKeyDown("z") && Input.GetKeyDown("left"))
     
     public void OnCollisionExit(Collision collision)
     {
+        
         onGround = false;
         // Debug.Log("onGround " + onGround);
         wallSliding = false;
         // Debug.Log("Wallsliding " + wallSliding);
+        if (collision.gameObject.tag == "Floor")
+        {
+            isFalling = true;
+        }
 
     }
 
