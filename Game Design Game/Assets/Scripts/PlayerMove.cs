@@ -52,7 +52,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKeyDown("z"))
         {
-            if (onGround && !wallSliding)
+            if (onGround)
             {
                 isJumping = true;
             }
