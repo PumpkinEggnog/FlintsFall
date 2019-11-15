@@ -52,8 +52,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKeyDown("z"))
         {
-            // Debug.Log("onGround " + onGround);
-            if (onGround)
+            if (onGround && !wallSliding)
             {
                 isJumping = true;
             }
@@ -202,7 +201,7 @@ public class PlayerMove : MonoBehaviour
         }
 
     }
-    
+
     public void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Floor")
@@ -216,7 +215,7 @@ public class PlayerMove : MonoBehaviour
         //     wallSliding = true;
         // }
     }
-    
+
     public void OnCollisionExit(Collision collision)
     {
         
