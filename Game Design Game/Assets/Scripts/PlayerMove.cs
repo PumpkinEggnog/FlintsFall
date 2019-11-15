@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 
     public float jumpVelocity = 5f;
 
+    private HitBox jumpBox;
     private Rigidbody rigidBody;
     private Animator animator;
     private HitBoxHandler hitBoxHandler;
@@ -14,9 +15,12 @@ public class PlayerMove : MonoBehaviour
     private bool onGround = false;
     private bool isJumping = false;
     private bool isFalling = true;
+
     private bool isWallJumping = false;
+    // private float lastWallJump = -1.0f;
+    // private float wallJumpCooldown = .5f;
+
     private bool facingRight = true;
-    private bool wasJustFalling = false;
 
     private bool wallSliding = false;
     private Vector3 wallNormal;
@@ -25,7 +29,7 @@ public class PlayerMove : MonoBehaviour
     private float lastDashTime = -1;
     private bool isDashing = false;
     private int dashDirection = 0;
-    public float dashCooldown = 1.0f;
+    public float dashCooldown = 2.0f;
     public float dashRange = 500;
     public float dashDuration = 0.003f;
     public float playerRotation = 0;
@@ -34,11 +38,14 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
+        jumpBox = GameObject.Find("jumpBox").GetComponent<HitBox>();
         hitBoxHandler = GetComponent<HitBoxHandler>();
         rigidBody = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         distanceFromOrigin = Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.z, 2));
         smear = GetComponentInChildren<SmearEffect>();
+
+        jumpBox.attacking(false);
     }
 
     void Update()
@@ -66,6 +73,15 @@ public class PlayerMove : MonoBehaviour
             lastDashTime = Time.time;
             isDashing = true;
             dashDirection = (Input.GetAxis("Horizontal") > 0) ? 1 : -1;
+        }
+
+        if (isFalling)
+        {
+            jumpBox.attacking(true);
+        }
+        else
+        {
+            jumpBox.attacking(false);
         }
 
         animator.SetBool("ground", onGround);
@@ -108,6 +124,7 @@ public class PlayerMove : MonoBehaviour
             isJumping = false;
             // isFalling = true;
             // Debug.Log("Jumping end " + isJumping);
+            rigidBody.velocity = new Vector3(0, 0, 0); // comment this line for
 
             rigidBody.AddForce(Vector3.up * jumpVelocity * Time.deltaTime, ForceMode.Impulse);
         }
@@ -115,10 +132,11 @@ public class PlayerMove : MonoBehaviour
         if (isWallJumping)//jump
         {
             isWallJumping = false;
+            wallSliding = false;
             isFalling = true;
-            // Debug.Log("wall jump activated");
-            Vector3 wallJumpVector = .5f*wallNormal + (1f*Vector3.up) * jumpVelocity * Time.deltaTime; // left is always the vector facing away from the character facing.
-            // Debug.Log(wallJumpVector);
+
+            Vector3 wallJumpVector = .5f*wallNormal + (1f*Vector3.up) * jumpVelocity * Time.deltaTime;
+            
             rigidBody.velocity = new Vector3(0, 0, 0);
 
             rigidBody.AddForce(wallJumpVector, ForceMode.Impulse);
@@ -154,6 +172,12 @@ public class PlayerMove : MonoBehaviour
         }
 
         playerRotation = rigidBody.transform.rotation.eulerAngles.y;
+        // Debug.Log($"{onGround} - {isJumping} - {wallSliding}");
+    }
+
+    public void setJumping(bool input)
+    {
+        isJumping = input;
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -186,11 +210,11 @@ public class PlayerMove : MonoBehaviour
             onGround = true;
         }
 
-        if (collision.gameObject.tag == "Wall")
-        {
-            wallNormal = collision.contacts[0].normal;
-            wallSliding = true;
-        }
+        // if (collision.gameObject.tag == "Wall")
+        // {
+        //     wallNormal = collision.contacts[0].normal;
+        //     wallSliding = true;
+        // }
     }
     
     public void OnCollisionExit(Collision collision)

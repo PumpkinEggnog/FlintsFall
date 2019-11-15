@@ -37,21 +37,7 @@ public class MutantAI : MonoBehaviour
             {
                 FaceTarget(); //causes AI to face player
                 
-                if(!isAttacking)
-                {
-                    isAttacking = true;
-                    lastAttack = Time.time;
-                }
                 
-                if(isAttacking && (Time.time >= (lastAttack + attackDelay + attackLength)))
-                {
-                    isAttacking = false;
-                    hitbox.attacking(false);
-                }
-                else if (isAttacking && (Time.time >= (lastAttack + attackDelay)))
-                {
-                    hitbox.attacking(true);
-                }
             }
         }
     }

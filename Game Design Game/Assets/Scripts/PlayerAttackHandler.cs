@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAttackHandler : MonoBehaviour
 {
+    private HitBox dashBox;
+    private HitBox jumpBox;
     private bool facingRight;
     private bool isAttacking;
     private Animator animator;
@@ -13,11 +15,12 @@ public class PlayerAttackHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HitBox hitbox = GetComponentInChildren<HitBox>();
+        jumpBox = GameObject.Find("jumpBox").GetComponent<HitBox>();
+        dashBox = GameObject.Find("dashBox").GetComponent<HitBox>();
         animator = GetComponentInChildren<Animator>();
         facingRight = true;
-        hitbox.changeDirection(facingRight);
-        hitbox.attacking(false);
+        dashBox.changeDirection(facingRight);
+        dashBox.attacking(false);
         isAttacking = false;
     }
 
@@ -37,33 +40,24 @@ public class PlayerAttackHandler : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {
-        HitBox hitbox = GetComponentInChildren<HitBox>();
-        
+    {   
         float horizontalInput = Input.GetAxis("Horizontal");
         
         if (horizontalInput > 0)
         {
             facingRight = true;
-            hitbox.changeDirection(facingRight);
+            dashBox.changeDirection(facingRight);
         }
         else if (horizontalInput < 0)
         {
             facingRight = false;
-            hitbox.changeDirection(facingRight);
+            dashBox.changeDirection(facingRight);
         }
 
-        // if (Input.GetKeyDown("f") && !isAttacking)
-        // {
-        //     hitbox.attacking(true);
-        //     lastAttackTime = Time.time;
-        //     isAttacking = true;
-        // }
-
         
-        if ((Input.GetKeyDown("f") || Input.GetKeyDown("c")) && !isAttacking)
+        if (Input.GetKeyDown("c") && !isAttacking)
         {
-            hitbox.attacking(true);
+            dashBox.attacking(true);
             lastAttackTime = Time.time;
             isAttacking = true;
         }
@@ -71,7 +65,7 @@ public class PlayerAttackHandler : MonoBehaviour
 
         if (isAttacking && ((Time.time - lastAttackTime) >= attackLength))
         {
-            hitbox.attacking(false);
+            dashBox.attacking(false);
             isAttacking = false;
         }
         
