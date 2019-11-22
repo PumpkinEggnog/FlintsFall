@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Rising acid test");
     }
 
     public void QuitGame()

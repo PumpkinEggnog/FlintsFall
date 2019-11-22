@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DiedScene.unity
     guid: 083355c0914ca3e4a892238d46076ac9
+  - enabled: 1
+    path: Assets/Scenes/Rising acid test.unity
+    guid: 70812550e3536d545913d97389ab8ba5
   m_configObjects: {}
