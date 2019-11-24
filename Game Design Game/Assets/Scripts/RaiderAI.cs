@@ -7,7 +7,7 @@ public class RaiderAI : MonoBehaviour
 
     public Transform player;
     public float range = 50.0f;
-    public float bulletImpulse = 20.0f;
+    public float bulletImpulse = 10.0f;
     public bool Shooting = false;
 
     private bool onRange = false;
@@ -17,7 +17,7 @@ public class RaiderAI : MonoBehaviour
     void Start()
     {
         float rand = Random.Range(1.0f, 2.0f);
-        InvokeRepeating("Shoot", 2, rand);
+        InvokeRepeating("Shoot", 3, rand);
     }
 
     public bool Firing()
