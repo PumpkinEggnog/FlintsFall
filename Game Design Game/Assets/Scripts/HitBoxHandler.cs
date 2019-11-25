@@ -77,6 +77,13 @@ public class HitBoxHandler : MonoBehaviour
             Debug.Log("health "+health.getHealth());
             setInvincible(true);
         }
+        else if (other.gameObject.CompareTag("EnemyProjectile") && !isInvincible)
+        {
+            this.health.changeHealth(-1);
+            Debug.Log("health "+health.getHealth());
+            setInvincible(true);
+            Destroy(other.gameObject);
+        }
         else if(other.gameObject.CompareTag("HealthPickup"))
         {
             HitBox hitbox = other.gameObject.GetComponent<HitBox>();
