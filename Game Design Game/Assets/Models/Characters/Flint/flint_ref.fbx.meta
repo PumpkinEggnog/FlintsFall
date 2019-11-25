@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: a648c36df1effdd86b5ee2720f07accb
+guid: 642382c4287bd34cbb78d0a5fea1d65f
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: -4791504522942941401
-    second: Armature|Armature|mixamo.com|Layer0
+      74: 2012204719954072570
+    second: metarig|metarig|mixamo.com|Layer0
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -40,11 +40,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Armature|mixamo.com|Layer0
-      takeName: Armature|Armature|mixamo.com|Layer0
-      internalID: -4791504522942941401
+      name: metarig|metarig|mixamo.com|Layer0
+      takeName: metarig|metarig|mixamo.com|Layer0
+      internalID: 2012204719954072570
       firstFrame: 0
-      lastFrame: 697
+      lastFrame: 197
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

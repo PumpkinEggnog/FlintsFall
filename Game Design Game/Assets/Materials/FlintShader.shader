@@ -1,32 +1,25 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
-// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
-
-Shader "Custom/Smear"
-{
-	Properties
-	{
-		_Position("Position", Vector) = (0, 0, 0, 0)
-		_PrevPosition("Prev Position", Vector) = (0, 0, 0, 0)
+Shader "Custom/FlintShader" {
+  Properties
+  {
+    _Position("Position", Vector) = (0, 0, 0, 0)
+    _PrevPosition("Prev Position", Vector) = (0, 0, 0, 0)
     _Amplification("Amplification", Range(0,1)) = 0
 
-		_NoiseScale("Noise Scale", Float) = 15
-		_NoiseHeight("Noise Height", Float) = 1.3
-	}
-
-	SubShader
-	{
-		Tags{ "RenderType" = "Opaque" }
+    _NoiseScale("Noise Scale", Float) = 15
+    _NoiseHeight("Noise Height", Float) = 1.3
+  }
+	SubShader {
+		Tags { "RenderType"="Opaque" }
 		LOD 200
 
 		CGPROGRAM
 		#pragma surface surf Lambert vertex:vert addshadow
 		#pragma target 3.0
 
-		struct Input
-		{
+		struct Input {
 			float4 vertColor;
 		};
-	
+
 		fixed4 _PrevPosition;
 		fixed4 _Position;
     float _Amplification;
@@ -54,11 +47,11 @@ Shader "Custom/Smear"
 				lerp(lerp(hash(n + 113.0), hash(n + 114.0), f.x),
 					lerp(hash(n + 170.0), hash(n + 171.0), f.x), f.y), f.z);
 		}
-	
-		void vert(inout appdata_full v, out Input o)
-		{
+
+		void vert(inout appdata_full v, out Input o){
 			UNITY_INITIALIZE_OUTPUT(Input, o);
 			o.vertColor = v.color;
+
 			fixed4 worldPos = mul(unity_ObjectToWorld, v.vertex);
 	
 			fixed3 worldOffset = _Position.xyz - _PrevPosition.xyz; // -5
@@ -75,23 +68,11 @@ Shader "Custom/Smear"
 			v.vertex      = lerp(v.vertex, mul(unity_WorldToObject, worldPos), _Amplification);
       v.vertex.xz   = lerp(v.vertex.xz, v.vertex.xz * 1.05, _Amplification);
 		}
-	
-		void surf(Input IN, inout SurfaceOutput o)
-		{
+
+		void surf (Input IN, inout SurfaceOutput o) {
 			o.Albedo = IN.vertColor.rgb;
-    /*
-	  		// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = c.rgb;
-	
-			// Metallic and smoothness come from slider variables
-			o.Metallic = _Metallic;
-			o.Smoothness = _Glossiness;
-			o.Alpha = c.a;
-      */
 		}
 		ENDCG
 	}
-
 	FallBack "Diffuse"
 }

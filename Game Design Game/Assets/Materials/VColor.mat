@@ -8,7 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: VColor
+<<<<<<< HEAD
+  m_Shader: {fileID: 4800000, guid: a0d187a24e2ad3d0dbea0d44a9298540, type: 3}
+=======
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+>>>>>>> 5f2d00225514df4f6fea17d4fcaa8132d9405f54
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
