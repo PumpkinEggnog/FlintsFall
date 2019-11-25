@@ -6,9 +6,13 @@ public class RaiderAI : MonoBehaviour
 {
 
     public Transform player;
-    public float range = 50.0f;
-    public float bulletImpulse = 10.0f;
+    public float range = 100.0f;
+    public float bulletImpulse = .005f;
+    public float lastShot = -1.0f;
+    public float shotDelay = 2.0f;
     public bool Shooting = false;
+
+    private LayerMask mask;
 
     private bool onRange = false;
 
@@ -16,8 +20,9 @@ public class RaiderAI : MonoBehaviour
 
     void Start()
     {
-        float rand = Random.Range(1.0f, 2.0f);
-        InvokeRepeating("Shoot", 3, rand);
+        mask = ~(1 << 12);
+        // float rand = Random.Range(1.0f, 2.0f);
+        // InvokeRepeating("Shoot", 5, rand);
     }
 
     public bool Firing()
@@ -27,14 +32,12 @@ public class RaiderAI : MonoBehaviour
     public void Shoot()
     {
 
-        if (onRange)
-        {
-            Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position + transform.forward, transform.rotation);
-            bullet.AddForce(transform.forward * bulletImpulse, ForceMode.Impulse);
+        Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position /* + transform.forward */, transform.rotation);
+            // bullet.AddForce(transform.forward * bulletImpulse * Time.deltaTime, ForceMode.Impulse);
+        bullet.velocity = (Vector3.Normalize(player.position - transform.position) * 5);
+        Debug.Log(Vector3.Normalize(player.position - transform.position));
 
-            Destroy(bullet.gameObject, 2);
-        }
-
+            // Destroy(bullet.gameObject, 2);
 
     }
 
@@ -48,6 +51,20 @@ public class RaiderAI : MonoBehaviour
     {
 
         onRange = Vector3.Distance(transform.position, player.position) < range;
+
+        RaycastHit hit;
+        // Debug.Log(player.position - transform.position);
+        if (Physics.Raycast(transform.position, Vector3.Normalize(player.position - transform.position), out hit, range, mask))
+        {
+            // Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.yellow);
+            // Debug.Log(hit.transform.name);
+            if ( (hit.transform.tag == "Player") &&
+                ((Time.time - lastShot) >= shotDelay) )
+            {
+                lastShot = Time.time;
+                Shoot();
+            }
+        }
 
         if (onRange)
             transform.LookAt(player);
