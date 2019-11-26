@@ -11,6 +11,7 @@ public class RaiderAI : MonoBehaviour
     public float lastShot = -1.0f;
     public float shotDelay = 2.0f;
     public bool Shooting = false;
+    public Vector3 playerVector;
 
     private LayerMask mask;
     private Animator animator;
@@ -21,6 +22,7 @@ public class RaiderAI : MonoBehaviour
 
     void Start()
     {
+        playerVector = player.position - transform.position;
         animator = GetComponentInChildren<Animator>();
         mask = ~(1 << 12);
         // float rand = Random.Range(1.0f, 2.0f);
@@ -52,6 +54,7 @@ public class RaiderAI : MonoBehaviour
 
     void Update()
     {
+        playerVector = player.position - transform.position;
 
         onRange = Vector3.Distance(transform.position, player.position) < range;
 

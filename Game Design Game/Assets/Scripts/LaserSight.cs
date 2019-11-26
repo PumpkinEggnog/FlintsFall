@@ -10,13 +10,13 @@ public class LaserSight : MonoBehaviour
     void Start()
     {
         line = gameObject.GetComponent<LineRenderer>();
-        raiderAI = GetComponent<RaiderAI>();
+        raiderAI = GetComponentInParent<RaiderAI>();
     }
 
     void FixedUpdate()
     {
         line.enabled = true;
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(transform.position, raiderAI.playerVector);
         RaycastHit hit;
 
         line.SetPosition(0, ray.origin);
