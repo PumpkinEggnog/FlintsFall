@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HitBoxHandler : MonoBehaviour
 {
-    private HealthSystem health = new HealthSystem(3);
+    private HealthSystem health = new HealthSystem(6);
     public Text textbox;
 
     private bool isInvincible;
