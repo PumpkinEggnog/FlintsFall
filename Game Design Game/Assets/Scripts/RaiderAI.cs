@@ -13,6 +13,7 @@ public class RaiderAI : MonoBehaviour
     public bool Shooting = false;
 
     private LayerMask mask;
+    private Animator animator;
 
     private bool onRange = false;
 
@@ -20,6 +21,7 @@ public class RaiderAI : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         mask = ~(1 << 12);
         // float rand = Random.Range(1.0f, 2.0f);
         // InvokeRepeating("Shoot", 5, rand);
@@ -36,6 +38,7 @@ public class RaiderAI : MonoBehaviour
             // bullet.AddForce(transform.forward * bulletImpulse * Time.deltaTime, ForceMode.Impulse);
         bullet.velocity = (Vector3.Normalize(player.position - transform.position) * 5);
         Debug.Log(Vector3.Normalize(player.position - transform.position));
+        
 
             // Destroy(bullet.gameObject, 2);
 
@@ -62,8 +65,13 @@ public class RaiderAI : MonoBehaviour
                 ((Time.time - lastShot) >= shotDelay) )
             {
                 lastShot = Time.time;
+                animator.SetBool("shoot", true);
                 Shoot();
             }
+        }
+        else
+        {
+            animator.SetBool("shoot", false);
         }
 
         if (onRange)
