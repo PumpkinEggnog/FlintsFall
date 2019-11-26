@@ -5,12 +5,15 @@ using UnityEngine.AI;
 
 public class MutantAI : MonoBehaviour
 {
+    private Animator animator;
+
     public float sightRadius = 5f;
 
     private bool isAttacking;
-    private float attackLength = 1f;
-    private float lastAttack = -1f;
-    private float attackDelay = 1f;
+    private bool isWalking;
+    // private float attackLength = 1f;
+    // private float lastAttack = -1f;
+    // private float attackDelay = 1f;
 
     Transform target;
     NavMeshAgent agent;
@@ -18,10 +21,18 @@ public class MutantAI : MonoBehaviour
     //initialization
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         HitBox hitbox = GetComponentInChildren<HitBox>();
+        isWalking = false;
         isAttacking = false;
         target = AISightManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
+    }
+
+    void Update()
+    {
+        animator.SetBool("attacking", isAttacking);
+        animator.SetBool("walking", isWalking);
     }
 
     void FixedUpdate()
@@ -32,13 +43,22 @@ public class MutantAI : MonoBehaviour
         if (distance <= sightRadius) //if the player moves into line of sight
         {
             agent.SetDestination(target.position); //move towards the player
+            isWalking = true;
 
             if(distance <= agent.stoppingDistance) //checks to see if the mutant is next to the player
             {
                 FaceTarget(); //causes AI to face player
-                
-                
+                isWalking = false;
+                isAttacking = true;
             }
+            else
+            {
+                isAttacking = false;
+            }
+        }
+        else
+        {
+            isWalking = false;
         }
     }
 
