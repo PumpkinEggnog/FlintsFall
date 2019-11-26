@@ -32,7 +32,7 @@ public class RaiderAI : MonoBehaviour
     public void Shoot()
     {
 
-        Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position /* + transform.forward */, transform.rotation);
+        Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position, transform.rotation);
             // bullet.AddForce(transform.forward * bulletImpulse * Time.deltaTime, ForceMode.Impulse);
         bullet.velocity = (Vector3.Normalize(player.position - transform.position) * 5);
         Debug.Log(Vector3.Normalize(player.position - transform.position));
@@ -67,7 +67,17 @@ public class RaiderAI : MonoBehaviour
         }
 
         if (onRange)
-            transform.LookAt(player);
+        {
+            FaceTarget();
+        }
+            // transform.LookAt(player);
+    }
+
+    void FaceTarget() //helps determine where player is in relation to enemy and has the enemy face the player
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion sightRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, sightRotation, Time.deltaTime * 5f);
     }
 
 

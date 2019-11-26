@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Destroy(this.gameObject, 5);
         
     }
 
@@ -14,11 +15,5 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("The projectile is colliding");
-        Destroy(this.gameObject);
     }
 }

@@ -331,5 +331,8 @@ MonoBehaviour:
   player: {fileID: 0}
   range: 50
   bulletImpulse: 20
+  lastShot: -1
+  shotDelay: 2
   Shooting: 1
-  projectile: {fileID: 0}
+  projectile: {fileID: 7189474995822067408, guid: 136ffc4af2f36cf4f9aa251f60ec818f,
+    type: 3}
