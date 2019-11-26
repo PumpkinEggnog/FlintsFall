@@ -35,8 +35,8 @@ public class MutantAI : MonoBehaviour
     {
         // Debug.Log(transform.velocity);
 
-        animator.SetBool("attacking", isAttacking);
-        animator.SetBool("walking", isWalking);
+        // animator.SetBool("attacking", isAttacking);
+        // animator.SetBool("walking", isWalking);
     }
 
     void FixedUpdate()
