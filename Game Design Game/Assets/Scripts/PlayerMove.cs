@@ -2,6 +2,8 @@
 
 public class PlayerMove : MonoBehaviour
 {
+    private AudioSource Whoosh2;
+
     public float speed = 50;
 
     public float jumpVelocity = 5f;
@@ -38,6 +40,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
+        AudioSource[] audios = GetComponents<AudioSource>();
+        Whoosh2 = audios[0];
         jumpBox = GameObject.Find("jumpBox").GetComponent<HitBox>();
         hitBoxHandler = GetComponent<HitBoxHandler>();
         rigidBody = GetComponent<Rigidbody>();
@@ -72,6 +76,7 @@ public class PlayerMove : MonoBehaviour
             lastDashTime = Time.time;
             isDashing = true;
             dashDirection = (Input.GetAxis("Horizontal") > 0) ? 1 : -1;
+            Whoosh2.Play();
         }
 
         if (isFalling)

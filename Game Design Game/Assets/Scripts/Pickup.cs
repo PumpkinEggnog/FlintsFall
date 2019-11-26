@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    public AudioClip HealthUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,10 @@ public class Pickup : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         this.gameObject.SetActive(false);
+        
+        if(other.gameObject.CompareTag("Player"))
+        {
+            AudioSource.PlayClipAtPoint(HealthUp, this.gameObject.transform.position);
+        }
     }
 }

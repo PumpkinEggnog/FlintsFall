@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class RaiderAI : MonoBehaviour
 {
+    private AudioSource shot1;
 
     public Transform player;
     public float range = 100.0f;
@@ -22,6 +23,7 @@ public class RaiderAI : MonoBehaviour
 
     void Start()
     {
+        shot1 = GetComponent<AudioSource>();
         playerVector = player.position - transform.position;
         animator = GetComponentInChildren<Animator>();
         mask = ~(1 << 12);
@@ -35,15 +37,11 @@ public class RaiderAI : MonoBehaviour
     }
     public void Shoot()
     {
-
+        shot1.Play();
         Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position, transform.rotation);
             // bullet.AddForce(transform.forward * bulletImpulse * Time.deltaTime, ForceMode.Impulse);
         bullet.velocity = (Vector3.Normalize(player.position - transform.position) * 5);
-        Debug.Log(Vector3.Normalize(player.position - transform.position));
-        
-
-            // Destroy(bullet.gameObject, 2);
-
+    
     }
 
     void OnDrawGizmosSelected() //gives enemy sight a red outline to distinguish area of vision

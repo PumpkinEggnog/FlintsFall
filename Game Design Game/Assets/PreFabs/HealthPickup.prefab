@@ -132,3 +132,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0c1f1e9e9593f4b8a524c093763f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthUp: {fileID: 8300000, guid: 40ea6a41137b7eb47820d473a7bf22c9, type: 3}
