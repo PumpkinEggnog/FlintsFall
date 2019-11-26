@@ -21,7 +21,8 @@ class CausticsProjector : MonoBehaviour
             renderer.sharedMaterial.SetTexture("_EmissionMap", causticsTextures[causticsIndex]);
         }
 
-        var lightDirection = Quaternion.Euler(0, 4 * Time.time, 0) * new Vector3(1, 0, 0);
+        // var lightDirection = Quaternion.Euler(0, 4 * Time.time, 0) * new Vector3(1, 0, 0);
+        var lightDirection = new Vector(1, 0, 0);
         var lightMatrix = Matrix4x4.TRS(
           new Vector3(0, 0, 0),
           Quaternion.LookRotation(lightDirection,
