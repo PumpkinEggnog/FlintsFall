@@ -12,6 +12,16 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Rising acid test");
     }
 
+    public void viewCredits()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
+
+    public void splashAdvance()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
     public void NextLevel()
     {
         nextLevel = GameObject.Find("GameState").GetComponent<GameState>().currentLevel;
