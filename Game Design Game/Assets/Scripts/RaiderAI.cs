@@ -11,8 +11,10 @@ public class RaiderAI : MonoBehaviour
     public float lastShot = -1.0f;
     public float shotDelay = 2.0f;
     public bool Shooting = false;
+    public Vector3 playerVector;
 
     private LayerMask mask;
+    private Animator animator;
 
     private bool onRange = false;
 
@@ -20,6 +22,8 @@ public class RaiderAI : MonoBehaviour
 
     void Start()
     {
+        playerVector = player.position - transform.position;
+        animator = GetComponentInChildren<Animator>();
         mask = ~(1 << 12);
         // float rand = Random.Range(1.0f, 2.0f);
         // InvokeRepeating("Shoot", 5, rand);
@@ -32,10 +36,11 @@ public class RaiderAI : MonoBehaviour
     public void Shoot()
     {
 
-        Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position /* + transform.forward */, transform.rotation);
+        Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position, transform.rotation);
             // bullet.AddForce(transform.forward * bulletImpulse * Time.deltaTime, ForceMode.Impulse);
         bullet.velocity = (Vector3.Normalize(player.position - transform.position) * 5);
         Debug.Log(Vector3.Normalize(player.position - transform.position));
+        
 
             // Destroy(bullet.gameObject, 2);
 
@@ -49,6 +54,7 @@ public class RaiderAI : MonoBehaviour
 
     void Update()
     {
+        playerVector = player.position - transform.position;
 
         onRange = Vector3.Distance(transform.position, player.position) < range;
 
@@ -62,12 +68,27 @@ public class RaiderAI : MonoBehaviour
                 ((Time.time - lastShot) >= shotDelay) )
             {
                 lastShot = Time.time;
+                animator.SetBool("shoot", true);
                 Shoot();
             }
         }
+        else
+        {
+            animator.SetBool("shoot", false);
+        }
 
         if (onRange)
-            transform.LookAt(player);
+        {
+            FaceTarget();
+        }
+            // transform.LookAt(player);
+    }
+
+    void FaceTarget() //helps determine where player is in relation to enemy and has the enemy face the player
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion sightRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, sightRotation, Time.deltaTime * 5f);
     }
 
 
