@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class MutantStats : MonoBehaviour
 {
+
+    
+    
     public int maxHealth = 10; //default 10 hp for testing purposes
     public int currentHealth { get; private set; } //used to keep track of how much health is left
 
     void Awake()
     {
+        
+
         currentHealth = maxHealth; //spawn enemy with max health
     }
 
@@ -19,6 +24,7 @@ public class MutantStats : MonoBehaviour
 
         if (currentHealth <= 0) //check to see if the mutant has less than or equal to 0 health
         {
+            
             Die(); //if it does then run Die function in MutantStatus
         }
     }

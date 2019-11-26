@@ -12,6 +12,8 @@ public class MutantAI : MonoBehaviour
     private float lastAttack = -1f;
     private float attackDelay = 1f;
 
+   
+
     Transform target;
     NavMeshAgent agent;
 

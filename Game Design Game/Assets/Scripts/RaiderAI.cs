@@ -12,6 +12,10 @@ public class RaiderAI : MonoBehaviour
     public float shotDelay = 2.0f;
     public bool Shooting = false;
 
+    ///
+    private AudioSource shot1;
+    //
+
     private LayerMask mask;
 
     private bool onRange = false;
@@ -23,6 +27,10 @@ public class RaiderAI : MonoBehaviour
         mask = ~(1 << 12);
         // float rand = Random.Range(1.0f, 2.0f);
         // InvokeRepeating("Shoot", 5, rand);
+
+        //
+        shot1 = GetComponent<AudioSource>();
+        //
     }
 
     public bool Firing()
@@ -31,6 +39,9 @@ public class RaiderAI : MonoBehaviour
     }
     public void Shoot()
     {
+        //
+        shot1.Play();
+        //
 
         Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position /* + transform.forward */, transform.rotation);
             // bullet.AddForce(transform.forward * bulletImpulse * Time.deltaTime, ForceMode.Impulse);

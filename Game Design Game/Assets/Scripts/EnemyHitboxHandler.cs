@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHitboxHandler : MonoBehaviour
 {
 
+    private AudioSource death1;
     private HealthSystem health = new HealthSystem(1);
     // Start is called before the first frame update
     void Start()
