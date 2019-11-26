@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class MutantAI : MonoBehaviour
 {
     private Animator animator;
+    private Rigidbody rigidBody;
 
     public float sightRadius = 5f;
 
@@ -22,6 +23,7 @@ public class MutantAI : MonoBehaviour
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        rigidBody = GetComponent<Rigidbody>();
         HitBox hitbox = GetComponentInChildren<HitBox>();
         isWalking = false;
         isAttacking = false;
@@ -31,6 +33,8 @@ public class MutantAI : MonoBehaviour
 
     void Update()
     {
+        // Debug.Log(transform.velocity);
+
         animator.SetBool("attacking", isAttacking);
         animator.SetBool("walking", isWalking);
     }
@@ -42,6 +46,7 @@ public class MutantAI : MonoBehaviour
 
         if (distance <= sightRadius) //if the player moves into line of sight
         {
+            animator.SetFloat("Blend", 1);
             agent.SetDestination(target.position); //move towards the player
             isWalking = true;
 
@@ -50,6 +55,7 @@ public class MutantAI : MonoBehaviour
                 FaceTarget(); //causes AI to face player
                 isWalking = false;
                 isAttacking = true;
+                animator.SetFloat("Blend", 0);
             }
             else
             {
@@ -59,6 +65,7 @@ public class MutantAI : MonoBehaviour
         else
         {
             isWalking = false;
+            animator.SetFloat("Blend", 0);
         }
     }
 
