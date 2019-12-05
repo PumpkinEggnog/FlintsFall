@@ -60,7 +60,7 @@ public class HitBoxHandler : MonoBehaviour
             }
         }
 
-        if(health.getHealth()==0)
+        if(health.getHealth()<=0)
         {
             SceneManager.LoadScene("DiedScene");
         }
@@ -85,6 +85,12 @@ public class HitBoxHandler : MonoBehaviour
             Destroy(other.gameObject);
         }
         else if(other.gameObject.CompareTag("HealthPickup"))
+        {
+            HitBox hitbox = other.gameObject.GetComponent<HitBox>();
+            this.health.changeHealth(hitbox.value);
+            Debug.Log("health "+health.getHealth());
+        }
+        else if (other.gameObject.CompareTag("InstantKill"))
         {
             HitBox hitbox = other.gameObject.GetComponent<HitBox>();
             this.health.changeHealth(hitbox.value);

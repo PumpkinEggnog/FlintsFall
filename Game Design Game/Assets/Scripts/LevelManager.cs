@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     private string nextLevel;
+
     
     public void StartGame()
     {
@@ -15,6 +16,12 @@ public class LevelManager : MonoBehaviour
     public void viewCredits()
     {
         SceneManager.LoadScene("CreditsScene");
+    }
+
+    public void exitCredits()
+    {
+        GameObject.Find("GameState").GetComponent<GameState>().currentLevel = "Tutorial-actual";
+        SceneManager.LoadScene("StartScene");
     }
 
     public void splashAdvance()

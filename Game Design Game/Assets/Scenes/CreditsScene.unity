@@ -597,7 +597,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 736116745}
-        m_MethodName: splashAdvance
+        m_MethodName: exitCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

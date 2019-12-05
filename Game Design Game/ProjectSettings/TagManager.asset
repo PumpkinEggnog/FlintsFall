@@ -14,6 +14,7 @@ TagManager:
   - WallLeft
   - WallRight
   - EnemyProjectile
+  - InstantKill
   layers:
   - Default
   - TransparentFX
