@@ -36,6 +36,10 @@ public class PlayerMove : MonoBehaviour
 
     private float distanceFromOrigin = 0;
 
+    //
+    private AudioSource Whoosh2;
+    //
+
     private void Start()
     {
         jumpBox = GameObject.Find("jumpBox").GetComponent<HitBox>();
@@ -46,6 +50,9 @@ public class PlayerMove : MonoBehaviour
         smear = GetComponentInChildren<SmearEffect>();
 
         jumpBox.attacking(false);
+
+        /////////
+        Whoosh2 = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -72,6 +79,8 @@ public class PlayerMove : MonoBehaviour
             lastDashTime = Time.time;
             isDashing = true;
             dashDirection = (Input.GetAxis("Horizontal") > 0) ? 1 : -1;
+
+            Whoosh2.Play();
         }
 
         if (isFalling)

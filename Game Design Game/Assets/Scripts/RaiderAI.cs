@@ -20,6 +20,8 @@ public class RaiderAI : MonoBehaviour
 
     public Rigidbody projectile;
 
+    private AudioSource shot1;
+
     void Start()
     {
         playerVector = player.position - transform.position;
@@ -27,6 +29,8 @@ public class RaiderAI : MonoBehaviour
         mask = ~(1 << 12);
         // float rand = Random.Range(1.0f, 2.0f);
         // InvokeRepeating("Shoot", 5, rand);
+
+        shot1 = GetComponent<AudioSource>();///////////////
     }
 
     public bool Firing()
@@ -40,9 +44,11 @@ public class RaiderAI : MonoBehaviour
             // bullet.AddForce(transform.forward * bulletImpulse * Time.deltaTime, ForceMode.Impulse);
         bullet.velocity = (Vector3.Normalize(player.position - transform.position) * 5);
         Debug.Log(Vector3.Normalize(player.position - transform.position));
-        
 
-            // Destroy(bullet.gameObject, 2);
+
+        // Destroy(bullet.gameObject, 2);
+
+        shot1.Play();
 
     }
 

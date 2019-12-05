@@ -6,10 +6,14 @@ public class StompBounce : MonoBehaviour
 {
     private PlayerMove move;
 
+    public AudioSource splat1; ///////////////
+
     // Start is called before the first frame update
     void Start()
     {
         move = gameObject.GetComponentInParent<PlayerMove>();
+
+        splat1 = GetComponent<AudioSource>();/////////
     }
 
     public void OnTriggerEnter(Collider Other)
@@ -19,7 +23,7 @@ public class StompBounce : MonoBehaviour
         {
             move.setJumping(true);
         }
-
+        splat1.Play();//////////////////////
     }
 
     
